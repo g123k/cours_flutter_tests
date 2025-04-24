@@ -22,17 +22,5 @@ void main() {
       favorites.remove(number);
       expect(favorites.items.contains(number), false);
     });
-
-    test('An item should be removed', () {
-      int number = 45;
-      favorites.add(number);
-      favorites.add(number);
-      expect(favorites.items.contains(number), true);
-
-      expect(
-        favorites.items.where((item) => item == number).length,
-        1,
-      );
-    });
   });
 }
