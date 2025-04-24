@@ -11,10 +11,8 @@ class Favorites extends ChangeNotifier {
   List<int> get items => _favoriteItems;
 
   void add(int itemNo) {
-    if (!_favoriteItems.contains(itemNo)) {
-      _favoriteItems.add(itemNo);
-      notifyListeners();
-    }
+    _favoriteItems.add(itemNo);
+    notifyListeners();
   }
 
   void remove(int itemNo) {
